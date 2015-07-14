@@ -1,0 +1,17 @@
+#DATABASE.YML FILE TEMPLATE
+
+development:
+  adapter: postgresql
+  database: bpdia_development
+  user: markc
+  password:
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: bpdia_test
+  user: markc
+  password:
+  host: localhost
+
+#CREATE THE DATABASE AFTERWARDS
