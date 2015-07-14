@@ -1,28 +1,7 @@
-== README
+I haven't really made any features yet. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+CRUD for bicycles with a few basic attributes. 
 
-Things you may want to cover:
+Made the new bicycles page render inside a modal which I thought was cool. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Needs to have a search ability and ultimately take the information put in the fields to come up with a price for the bicycle. like a kelly blue book for bicycles.
