@@ -11,16 +11,23 @@
 
 </head>
 <body>
-
-<!-- add container div around yield for stuff -->
+<header>
+  <h1>
+    Bikepedia.1
+  </h1>
+</header>
+  <hr>
 <div id="content">
-<%= yield -%>
+
+
+
+  <%= yield -%>
+<br>
+<br>
+  <p align="center", id="notice"><%= notice %></p>
 </div>
+
 <!-- I don't know where to keep this dialog div but it is realy important right now that it is in the app.. -->
-
-
-
-
 <div id="dialog" title="Information">
 </div>
 

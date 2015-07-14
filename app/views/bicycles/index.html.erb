@@ -1,52 +1,10 @@
-<p id="notice"><%= notice %></p>
-
-<% if @bicycles.any? %>
-
-  <h1>Listing Bicycles</h1>
-  <div class="CSSTableGenerator" >
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Model</th>
-          <th>Year</th>
-          <th>Make</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @bicycles.each do |bicycle| %>
-        <tr>
-          <td><%= bicycle.name %></td>
-          <td><%= bicycle.model %></td>
-          <td><%= bicycle.year %></td>
-          <td><%= bicycle.make %></td>
-
-
-          <td><button><%= link_to 'Edit', edit_bicycle_path(bicycle) %></button></td>
-          <td><button><%= link_to 'Destroy', bicycle, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
-        </tr>
-        <% end %>
-      </tbody>
-    </tr>
-    <tr>
-    </tr>
-  </tbody>
-  </table>
-  </div>
-
-<% end %>
-
-<!-- This new bicyle line is a crap fix for me not just editing the image to have it show some text even though i have imagemagick mehhhhhhhhhhhh....noob -->
-<br>
-<br>
-<hr>
-NEW BICYCLE ----->
-
+<!-- <p id="notice"><%= notice %></p>
+ -->
 <div id="bacon">
+ADD NEW BICYCLE ----->
 
   <button>
-    <%= link_to image_tag("image123.png", :border=>1111), new_bicycle_path, remote: true %>
+    <%= link_to image_tag("image123.png", height: "100", width: "100"), new_bicycle_path, remote: true %>
   </button>
 
   <div id="bacon1">
@@ -55,3 +13,35 @@ NEW BICYCLE ----->
 
 </div>
 <hr>
+<% if @bicycles.any? %>
+
+  <h2 align="center">Listing Bicycles Created</h2>
+  <br>
+<div class="CSSTableGenerator" >
+  <table>
+    <tbody>
+      <td>Name</td>
+      <td>Model</td>
+      <td>Year</td>
+      <td>Make</td>
+      <td>Show this bike</td>
+      <td>Edit</td>
+      <td>Delete</td>
+      <% @bicycles.each do |bicycle| %>
+      <tr>
+        <td><%= bicycle.name %></td>
+        <td><%= bicycle.model %></td>
+        <td><%= bicycle.year %></td>
+        <td><%= bicycle.make %></td>
+        <td><button><%= link_to 'Show', bicycle %></button></td>
+        <td><button><%= link_to 'Edit', edit_bicycle_path(bicycle), remote: true %></button></td>
+        <td><button><%= link_to 'Destroy', bicycle, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+      </tr>
+      <% end %>
+    </tbody>
+    </tr>
+  </table>
+</div>
+
+
+<% end %>

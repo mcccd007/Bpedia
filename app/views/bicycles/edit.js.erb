@@ -1,0 +1,4 @@
+debugger;
+var dialog = $('#dialog')
+dialog.html('<%= escape_javascript(render partial: 'edit.html.erb', locals: {bicycle: @bicycle}).html_safe %>')
+dialog.dialog('open')

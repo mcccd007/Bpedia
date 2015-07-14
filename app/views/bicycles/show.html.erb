@@ -1,4 +1,11 @@
-<p id="notice"><%= notice %></p>
+  <!-- <p id="notice"><%= notice %></p> -->
+
+<% if @bicycle.name == "Canunga" %>
+<h1>
+  <%= "Opened portal to Hell." %>
+</h1>
+<% end %>
+
 
 <p>
   <strong>Name:</strong>
@@ -20,5 +27,12 @@
   <%= @bicycle.make %>
 </p>
 
-<%= link_to 'Edit', edit_bicycle_path(@bicycle) %> |
-<%= link_to 'Back', bicycles_path %>
+<button><%= link_to 'Others like this', bicycles_similar_path %></button>
+<button><%= link_to 'Back', root_path %></button>
+<br>
+<br>
+<br>
+<br>
+<% if @bicycle.name == @bicycle.name %>
+  <%= "Opened portal to Hell." %>
+<% end %>
