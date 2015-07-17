@@ -1,28 +1,26 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+wikiBikes, cinELLYbluebook ???
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  -- a bicycle wikipedia type application with the ability to submit a bicycle and a tags(specs) to a bicycle, to compare bicycles from late sixties to early 2000s in terms of functionality and cost(s).
+  
+  I would like to:
+  
+  Implement the creation of tags from the bicycle show page.
+  
+  Tags would be clickable and not really something you could submit as a string. 7sp = seven speed = 7s = 7...etc.
+  
+  Ability to show the user information about their bicycle based on the entries in the bicycle new form.
+  
+  Put in a nav bar with links to relevant sites for this topic like Sheldon Brown or bikepedia and other links
+  
+  Make a front page, like a intermediate load screen that immediately fades and doesnt hinder the user getting to the site because no one likes that.
+  
+  Make a search function, with more than just a name finder, a whole tree view perhaps of all congruent possiblities
+  like gearing. frame materials, wheel size, frame size, estimated year range
+  
+  Make a serial number lookup ability with a huge database.
+  
+  Figure out a rock solid way of classifying bicycles, more concrete application structure.. 
+  
+  
