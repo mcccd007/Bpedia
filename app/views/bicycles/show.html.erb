@@ -1,11 +1,11 @@
-  <!-- <p id="notice"><%= notice %></p> -->
+<div id="content">
 
-<% if @bicycle.name == "Canunga" %>
-<h1>
-  <%= "Opened portal to Hell." %>
-</h1>
+<p id="notice"><%= notice %></p>
+
+<% if (@bicycle.name == "cheese") %>
+  <%= "secret password entered" %>
+  <br>
 <% end %>
-
 
 <p>
   <strong>Name:</strong>
@@ -27,12 +27,20 @@
   <%= @bicycle.make %>
 </p>
 
-<button><%= link_to 'Others like this', bicycles_similar_path %></button>
-<button><%= link_to 'Back', root_path %></button>
-<br>
-<br>
-<br>
-<br>
-<% if @bicycle.name == @bicycle.name %>
-  <%= "Opened portal to Hell." %>
-<% end %>
+<div>
+  <div id="div1">
+
+    <h2><%= @bicycle.tags.count %> tags for this bicycle |
+    <%= link_to "Add a new tag", new_bicycle_tag_path(@bicycle) %></h2>
+
+  </div>
+
+  <%= render @bicycle.tags %>
+
+</div>
+
+<button> <%= link_to 'Edit', edit_bicycle_path(@bicycle) %> </button> |
+<button> <%= link_to 'Back', bicycles_path %> </button> |
+<button> <%= link_to 'Add a components tag to this bicycle', new_bicycle_tag_path(@bicycle) %></button>
+
+</div>

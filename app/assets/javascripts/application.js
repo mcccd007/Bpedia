@@ -20,11 +20,11 @@ $(function() {
     autoOpen: false,
     show: {
       effect: "blind",
-      duration: 150
+      duration: 200
     },
     hide: {
       effect: "explode",
-      duration: 150
+      duration: 200
     }
   });
 });

@@ -1,16 +1,16 @@
-  class BicyclesController < ApplicationController
+class BicyclesController < ApplicationController
   before_action :set_bicycle, only: [ :edit, :update, :destroy]
 
   def index
-        @bicycles = Bicycle.all
-      end
+    @bicycles = Bicycle.all
+  end
 
-  def similar
-  @bicycle = Bicycle.find(params[:similar])
+  def compare
   end
 
   def show
     @bicycle = Bicycle.find(params[:id])
+    @tag = Tag.new
   end
 
   def new
@@ -24,9 +24,9 @@
     @bicycle = Bicycle.new(bicycle_params)
 
     respond_to do |format|
-        if (@bicycle.name == "Admin" || @bicycle.name == "weenus")
-          format.html { redirect_to bicycles_similar_path  }
-        end
+      if (@bicycle.name == "Admin" || @bicycle.name == "weenus")
+        format.html { redirect_to bicycles_url }
+      end
       if @bicycle.save
         format.html { redirect_to @bicycle, notice: "#{@bicycle.name} was successfully created." }
         format.json { render :show, status: :created, location: @bicycle }
@@ -58,11 +58,12 @@
   end
 
   private
-    def set_bicycle
-      @bicycle = Bicycle.find(params[:id])
-    end
+  def set_bicycle
+    @bicycle = Bicycle.find(params[:id])
+  end
 
-    def bicycle_params
-      params.require(:bicycle).permit(:name, :model, :year, :make)
-    end
+  def bicycle_params
+    params.require(:bicycle).permit(:name, :model, :year, :make)
+  end
+
 end
